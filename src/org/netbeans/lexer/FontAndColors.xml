@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<fontscolors>
+    <fontcolor name="identifier" default="identifier"/>
+    <fontcolor name="keyword" default="keyword"/>
+    <fontcolor name="whitespace" default="whitespace"/>
+    <fontcolor name="type" default="type"/>
+    <fontcolor name="operator" default="operator"/>
+    <fontcolor name="string" default="string"/>
+    <fontcolor name="number" default="number"/>
+</fontscolors>
+ 
