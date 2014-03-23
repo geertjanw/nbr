@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.netbeans.r.execution
+OpenIDE-Module-Layer: org/netbeans/r/execution/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/netbeans/r/execution/Bundle.properties
+OpenIDE-Module-Requires: org.openide.windows.WindowManager
+OpenIDE-Module-Specification-Version: 1.0
+

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.netbeans.r.palette
+OpenIDE-Module-Layer: org/netbeans/r/palette/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/netbeans/r/palette/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

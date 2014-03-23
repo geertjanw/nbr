@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+<!--    <folder name="Editors">
+        <folder name="text">
+            <folder name="x-r">
+                <file name="RSourceFileLayerPaletteFactory.instance">
+                    <attr name="instanceOf" stringvalue="org.netbeans.spi.palette.PaletteController"/>
+                    <attr name="instanceCreate"
+                          methodvalue="org.netbeans.r.palette.RSourceFileLayerPaletteFactory.createPalette"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>-->
+    <folder name="RTools">
+        <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        <folder name="Artificial Intelligence">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>   
+        </folder>
+        <folder name="Data analysis and mining">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        </folder>
+        <folder name="Data visualization">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        </folder>        
+        <folder name="Finance">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        </folder> 
+        <folder name="Image manipulation">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        </folder> 
+        <folder name="Mathematics">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        </folder> 
+        <folder name="Probability and statistics">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.netbeans.r.palette.Bundle"/>
+        </folder> 
+        
+    </folder>
+</filesystem>
