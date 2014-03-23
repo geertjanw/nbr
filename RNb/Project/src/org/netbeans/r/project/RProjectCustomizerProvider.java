@@ -17,7 +17,7 @@ public class RProjectCustomizerProvider implements CustomizerProvider {
 
     public final RProject project;
 
-    public static final String CUSTOMIZER_FOLDER_PATH = "Projects/org-netbeans-project/Customizer";
+    public static final String CUSTOMIZER_FOLDER_PATH = "Projects/org-netbeans-modules-r-project/Customizer";
 
     public RProjectCustomizerProvider(RProject project) {
         this.project = project;

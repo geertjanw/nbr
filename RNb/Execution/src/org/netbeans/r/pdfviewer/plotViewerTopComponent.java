@@ -36,7 +36,7 @@ public final class plotViewerTopComponent extends TopComponent {
 
     public plotViewerTopComponent() {
         initComponents();
-//        setName(Bundle.CTL_plotViewerTopComponent());
+        setName(Bundle.CTL_plotViewerTopComponent());
 //        setToolTipText(Bundle.HINT_plotViewerTopComponent());
 
     }

@@ -89,7 +89,7 @@ public class ReditorRunnable implements Runnable {
                         pn.add(scrollpane);
                         pn.setLayout(new BorderLayout());
                          
-                        pn.add(viewerComponentPanel);                        
+                        pn.add(viewerComponentPanel);
                         win.add(pn, BorderLayout.CENTER);                        
                         
                     }

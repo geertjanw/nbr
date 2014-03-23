@@ -16,7 +16,7 @@ public class GeneralRProjectProperties implements ProjectCustomizer.CompositeCat
     private static final String GENERAL = "General";
 
     @ProjectCustomizer.CompositeCategoryProvider.Registration(
-            projectType = "org-netbeans-project", position = 10)
+            projectType = "org-netbeans-modules-r-project", position = 10)
     public static GeneralRProjectProperties createGeneral() {
         return new GeneralRProjectProperties();
     }

@@ -17,10 +17,12 @@ import org.netbeans.spi.project.CopyOperationImplementation;
 import org.netbeans.spi.project.DeleteOperationImplementation;
 import org.netbeans.spi.project.MoveOrRenameOperationImplementation;
 import org.netbeans.spi.project.ProjectState;
+import org.netbeans.spi.project.support.LookupProviderSupport;
 import org.netbeans.spi.project.ui.LogicalViewProvider;
 import org.netbeans.spi.project.ui.support.CommonProjectActions;
 import org.netbeans.spi.project.ui.support.DefaultProjectOperations;
 import org.netbeans.spi.project.ui.support.NodeFactorySupport;
+import org.netbeans.spi.project.ui.support.UILookupMergerSupport;
 import org.openide.filesystems.FileObject;
 import org.openide.loaders.DataFolder;
 import org.openide.loaders.DataObjectNotFoundException;
@@ -59,15 +61,18 @@ public class RProject implements Project {
         if (lkp == null) {
             lkp = Lookups.fixed(new Object[]{
                 this,
-                new information(),
+                new RPInformation(),
                 new RProjectLogicalView(this),
                 new RProjectCustomizerProvider(this),
                 new RProjectActionProvider(),
                 new RProjectMoveOrRenameOperation(this),
                 new RProjectCopyOperation(),
-                new RProjectDeleteOperation(),});
+                new RProjectDeleteOperation(),
+                UILookupMergerSupport.createPrivilegedTemplatesMerger(),
+                UILookupMergerSupport.createRecommendedTemplatesMerger(),
+            });
         }
-        return lkp;
+        return LookupProviderSupport.createCompositeLookup(lkp, "Projects/org-netbeans-modules-r-project/Lookup");
     }
 
     //Action Provider for the project
@@ -118,22 +123,21 @@ public class RProject implements Project {
     //Move operation implementation
     private final class RProjectMoveOrRenameOperation implements MoveOrRenameOperationImplementation {
 
-        private final RProject rProject; 
+        private final RProject rProject;
 
         public RProjectMoveOrRenameOperation(RProject rProject) {
             this.rProject = rProject;
         }
-        
-        
-        
+
         @Override
         public List<FileObject> getMetadataFiles() {
-            FileObject projectDirectory  = rProject.getProjectDirectory();
-            List<FileObject> files  = new ArrayList<FileObject>();
-            for(FileObject nomFichier : files)
+            FileObject projectDirectory = rProject.getProjectDirectory();
+            List<FileObject> files = new ArrayList<FileObject>();
+            for (FileObject nomFichier : files) {
                 System.out.println("========" + nomFichier.getName() + "============");
+            }
             return files;
-            
+
         }
 
         @Override
@@ -159,7 +163,7 @@ public class RProject implements Project {
     }
 
 //Class information of the project
-    private final class information implements ProjectInformation {
+    private final class RPInformation implements ProjectInformation {
 
         @StaticResource()
         public static final String RPROJECT_ICON = "org/netbeans/r/project/Rlogo.png";
@@ -272,7 +276,7 @@ public class RProject implements Project {
 
             public ProjectNode(RProject project, Node original) throws DataObjectNotFoundException {
                 super(original,
-                        NodeFactorySupport.createCompositeChildren(project, "Projects/org-netbeans-project/Nodes"),
+                        NodeFactorySupport.createCompositeChildren(project, "Projects/org-netbeans-modules-r-project/Nodes"),
                         //new FilterNode.Children(original),
                         new ProxyLookup(
                                 new Lookup[]{
@@ -313,7 +317,6 @@ public class RProject implements Project {
 
         @Override
         public Node findPath(Node node, Object o) {
-            ///throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             return null;
         }
 

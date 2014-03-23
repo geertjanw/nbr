@@ -18,7 +18,7 @@ import org.openide.util.Exceptions;
  *
  * @author constantin
  */
-@NodeFactory.Registration(projectType = "org-netbeans-project", position = 10)
+@NodeFactory.Registration(projectType = "org-netbeans-modules-r-project", position = 10)
 public class TextsNodeFactory implements NodeFactory {
 
     @Override
