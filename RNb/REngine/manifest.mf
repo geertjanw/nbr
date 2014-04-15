@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.netbeans.r.rengine
+OpenIDE-Module-Localizing-Bundle: org/netbeans/r/rengine/Bundle.properties
+OpenIDE-Module-Provides: REngine
+OpenIDE-Module-Specification-Version: 1.0
+
