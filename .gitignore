@@ -8,3 +8,8 @@
 /RNb/Language/build/
 /RNb/Project/build/
 /RNb/Analyzer/nbproject/private/
+/nbproject/private/
+/build/
+/RNb/Execution/nbproject/private/
+/RNb/REngine/build/
+/RNb/RServe/build/

@@ -16,7 +16,7 @@ import org.icepdf.ri.common.SwingViewBuilder;
 import org.netbeans.api.progress.ProgressHandle;
 import org.netbeans.api.progress.ProgressHandleFactory;
 import org.netbeans.r.options.RconfigurationPanel;
-import org.netbeans.r.pdfviewer.plotViewerTopComponent;
+import org.netbeans.r.pdfviewer.PlotViewerTopComponent;
 import org.openide.ErrorManager;
 import org.openide.execution.NbProcessDescriptor;
 import org.openide.filesystems.FileObject;
@@ -39,7 +39,7 @@ public class ReditorRunnable implements Runnable {
     private String Rexecutable = NbPreferences.forModule(RconfigurationPanel.class).get("RConfiguration.path", "");
     private int executionStatus;
     private String fileExecuted;
-    private final plotViewerTopComponent win = plotViewerTopComponent.findInstance();
+    private final PlotViewerTopComponent win = PlotViewerTopComponent.findInstance();
 
     public ReditorRunnable(DataObject dataObject, String commandLineArgs) {
         this.dataObject = dataObject;

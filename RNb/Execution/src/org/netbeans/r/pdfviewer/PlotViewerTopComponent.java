@@ -14,27 +14,27 @@ import org.openide.windows.TopComponent;
         autostore = false
 )
 @TopComponent.Description(
-        preferredID = "plotViewerTopComponent",
+        preferredID = "PlotViewerTopComponent",
         //iconBase="SET/PATH/TO/ICON/HERE", 
         persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
-@ActionID(category = "Window", id = "org.netbeans.pdfviewer.plotViewerTopComponent")
+@ActionID(category = "Window", id = "org.netbeans.pdfviewer.PlotViewerTopComponent")
 @ActionReference(path = "Menu/Window" /*, position = 333 */)
 @TopComponent.OpenActionRegistration(
-        displayName = "#CTL_plotViewerAction",
-        preferredID = "plotViewerTopComponent"
+        displayName = "#CTL_PlotViewerAction",
+        preferredID = "PlotViewerTopComponent"
 )
 @Messages({
-    "CTL_plotViewerAction=plotViewer",
-    "CTL_plotViewerTopComponent=Graphic",
-    "HINT_plotViewerTopComponent=This is a plot window"
+    "CTL_PlotViewerAction=PlotViewer",
+    "CTL_PlotViewerTopComponent=Graphic",
+    "HINT_PlotViewerTopComponent=This is a plot window"
 })
-public final class plotViewerTopComponent extends TopComponent {
+public final class PlotViewerTopComponent extends TopComponent {
 
-    private static plotViewerTopComponent instance;
+    private static PlotViewerTopComponent instance;
 
-    public plotViewerTopComponent() {
+    public PlotViewerTopComponent() {
         initComponents();
         setName(Bundle.CTL_plotViewerTopComponent());
 //        setToolTipText(Bundle.HINT_plotViewerTopComponent());
@@ -87,9 +87,9 @@ public final class plotViewerTopComponent extends TopComponent {
         // TODO read your settings according to their version
     }
 
-    public static plotViewerTopComponent findInstance() {
+    public static PlotViewerTopComponent findInstance() {
         if (instance == null) {
-            instance = new plotViewerTopComponent();
+            instance = new PlotViewerTopComponent();
             return instance;
         }
         return instance;

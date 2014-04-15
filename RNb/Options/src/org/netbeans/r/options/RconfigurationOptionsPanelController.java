@@ -10,7 +10,7 @@ import org.openide.util.Lookup;
 @OptionsPanelController.SubRegistration(location = "R",
 displayName = "#AdvancedOption_DisplayName_Rconfiguration",
 keywords = "#AdvancedOption_Keywords_Rconfiguration",
-keywordsCategory = "R/Rconfiguration")
+keywordsCategory = "R/Rconfiguration", position=0)
 public final class RconfigurationOptionsPanelController extends OptionsPanelController {
 
     private RconfigurationPanel panel;
